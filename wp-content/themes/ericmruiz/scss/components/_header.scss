@@ -1,0 +1,66 @@
+.header {
+	position: relative;
+	height: em(200px);
+	margin-bottom: em(50px);
+	background: map-get($colors, blue);
+	color: map-get($colors, white);
+	text-align: center;
+	
+	@media (min-width: map-get($break, tablet)) {
+		height: em(350px);
+		margin-bottom: em(100px);
+	}
+
+	.container {position: relative;}
+}
+
+
+.blog-header {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+.title {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+.blog-header {
+	position: relative;
+	
+	h1 {
+		position: relative;
+		font-size : inherit;
+	}
+
+	.page-title,
+	.page-subtitle {
+		font-family: $freight-headline;
+		text-transform: uppercase;}
+	
+	.page-title {
+		font-size: em(36px);
+		font-weight: 800;
+		letter-spacing: .04em;
+		color: map-get($colors, white);
+		text-decoration: none;
+		border-bottom: 3px solid #EA212C;
+
+		@media (min-width: map-get($break, tablet)){
+			font-size: em(52px);
+		}
+	}
+
+	.page-subtitle {
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-top: em(-15px);
+		color: map-get($colors, blueSecond);
+	}
+	
+}
+

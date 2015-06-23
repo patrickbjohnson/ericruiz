@@ -1,0 +1,14 @@
+{
+  "name": "YeoPress-Template",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~1.9.0",
+    "requirejs": "~2.1.5",
+    "breakpoint-sass": "~2.6.1",
+    "susy": "~2.2.5"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "~2.6.1",
+    "susy": "~2.2.5"
+  }
+}

@@ -1,0 +1,7 @@
+.content {
+	
+	@media(min-width: map-get($break, tablet)){
+		@include span(8);
+		@include push(2);
+	}
+}

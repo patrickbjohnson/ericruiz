@@ -1,0 +1,59 @@
+body {
+	font-size: 1em;
+	font-family: $freight-body;
+	line-height: 1.5;
+	color: map-get($colors, black);
+}
+
+
+h1, h2, h3,
+h4, h5, h6 {
+	margin-bottom: em(10px);
+	font-family: $source-headline;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+h1 {font-size: em(32px);}
+h2 {font-size: em(24px);}
+h3 {font-size: em(16px);}
+h4 {font-size: em(14px);}
+h5, h6 {font-size: em(12px);}
+
+a {
+	@include prefix(transition, color 300ms ease);
+	text-decoration: none;
+	color: map-get($colors, black);
+	&:hover {color: map-get($colors, black);}
+}
+p {
+	font-size: em(18px);
+	margin-bottom: em(25px);
+}
+
+blockquote, q {
+	border-left: 5px solid map-get($colors, blue);
+	font-style: italic;
+	padding-left: em(10px);
+
+	@media (min-width: map-get($break, tablet)){
+		margin-left: em(10px);
+		padding-left: em(16px);
+	}
+}
+
+pre {
+	margin-bottom: em(25px);
+	padding: 0 em(20px) em(25px);
+	font-family: monospace;
+	white-space: pre-wrap;
+	tab-size: 2;
+	background: map-get($colors, offwhite);
+	overflow: auto;
+}
+
+.error-link {
+	font-weight: 700;
+	color: map-get($colors, blue);
+	text-decoration: underline ;
+}

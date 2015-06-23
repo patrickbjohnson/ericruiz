@@ -1,0 +1,32 @@
+.nav-main {
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	right: 0;
+	@media (min-width: map-get($break, tablet)){
+		bottom: 10%;
+	}
+}
+
+.menu {
+	&-item {
+		display: inline-block;
+		margin-left: em(5px);
+		margin-right: em(5px);
+		@media (min-width: map-get($break, tablet)){
+			margin-left: em(10px);
+			margin-right: em(10px);
+		}
+	}
+	
+	a {
+		font-size: em(16px);
+		font-style: italic;
+		text-decoration: none;
+		color: map-get($colors, blueSecond);
+
+		@media (min-width: map-get($break, tablet)) {
+			font-size: em(20px);
+		}
+	}
+}
