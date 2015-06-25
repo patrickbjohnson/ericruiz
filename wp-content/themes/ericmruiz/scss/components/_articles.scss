@@ -1,7 +1,7 @@
 .article,
 .single-article {
 	ol, ul {
-		margin-left: em(40px);
+		margin-left: em(42px);
 		margin-bottom: em(16px);
 	}
 
@@ -41,11 +41,26 @@
 
 	&-content {
 		position: relative;
+		overflow: hidden;
 		@media (min-width: map-get($break, tablet)){
 			@include span(8);
 			float: none;
 			margin: auto;	
 		}
+
+		img {
+			max-width: 100%;
+			width: auto;
+		}
+	}
+}
+
+.comment-content {
+	position: relative;
+	@media (min-width: map-get($break, tablet)){
+		@include span(8);
+		float: none;
+		margin: auto;	
 	}
 }
 

@@ -154,6 +154,36 @@ img {
   max-width: 50em;
 }
 
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header {
   position: relative;
   height: 12.5em;
@@ -279,7 +309,6 @@ img {
 }
 .menu a {
   font-size: 1em;
-  font-style: italic;
   text-decoration: none;
   color: #8E949F;
 }
@@ -301,7 +330,7 @@ img {
 .article ol, .article ul,
 .single-article ol,
 .single-article ul {
-  margin-left: 2.5em;
+  margin-left: 2.625em;
   margin-bottom: 1em;
 }
 .article:last-child hr,
@@ -345,9 +374,27 @@ img {
 }
 .article-content {
   position: relative;
+  overflow: hidden;
 }
 @media (min-width: 50em) {
   .article-content {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    float: none;
+    margin: auto;
+  }
+}
+.article-content img {
+  max-width: 100%;
+  width: auto;
+}
+
+.comment-content {
+  position: relative;
+}
+@media (min-width: 50em) {
+  .comment-content {
     width: 66.10169%;
     float: left;
     margin-right: 1.69492%;
@@ -443,7 +490,7 @@ hr {
   content: "";
   position: absolute;
   display: block;
-  top: 70px;
+  top: 50px;
   left: 0;
   right: 0;
   width: 0px;
@@ -454,12 +501,17 @@ hr {
   border-right: 15px solid transparent;
   z-index: 10;
 }
+@media (min-width: 50em) {
+  .page-title:after {
+    top: 70px;
+  }
+}
 
 .content-flag {
   position: relative;
   display: block;
   width: 50%;
-  margin: 0 auto 100px;
+  margin: 50px auto 100px;
   height: 3px;
   background: #EA212C;
 }

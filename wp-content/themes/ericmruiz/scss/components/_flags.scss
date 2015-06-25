@@ -13,7 +13,7 @@
 		content: "";
 		position: absolute;
 		display: block;
-		top: 70px;
+		top: 50px;
 		left: 0;
 		right: 0;
 		width: 0px;
@@ -24,42 +24,20 @@
 		border-right: 15px solid transparent;
 		z-index: 10;
 	}
+
+
+	@media (min-width: map-get($break, tablet)){
+		&:after {
+			top: 70px;
+		}
+	}
 }
-
-
-// .flag:after {
-// 	content: "";
-// 	position: relative;
-// 	display: block;
-// 	width: 30px;
-// 	height: 10px;
-// 	margin: auto;
-// 	padding-top: 15px;
-// 	background: map-get($colors, red);
-// 	top: 0;
-// }
-
-// .flag:before {
-// 	content: "";
-// 	position: absolute;
-// 	display: block;
-// 	left: 0;
-// 	right: 0;
-// 	bottom: 0;
-// 	width: 0px;
-// 	height: 10px;
-// 	margin: auto;
-// 	border-bottom: 5px solid #001f3f;
-// 	border-left: 15px solid transparent;
-// 	border-right: 15px solid transparent;
-// 	z-index: 10;
-// }
 
 .content-flag {
 	position: relative;
 	display: block;
 	width: 50%;
-	margin: 0 auto 100px;
+	margin: 50px auto 100px;
 	height: 3px;
 	background: map-get($colors, red);
 

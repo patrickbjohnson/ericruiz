@@ -19,6 +19,10 @@
 				</div>
 				<span class="content-flag"></span>
 				<hr>
+				<div class="comment-content">
+					<?php comments_template(); ?>	
+				</div>
+				
 			</article>
 		<?php endwhile; ?>
 	<?php else: ?>

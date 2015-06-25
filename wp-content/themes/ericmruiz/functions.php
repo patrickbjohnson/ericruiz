@@ -24,7 +24,7 @@ function theme_enqueue_scripts(){
 //Add Featured Image Support
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
-        set_post_thumbnail_size( 500 );
+        set_post_thumbnail_size( 800 );
 }
 
 
@@ -51,21 +51,6 @@ function register_menus() {
 	);
 }
 add_action( 'init', 'register_menus' );
-
-// function register_widgets(){
-
-// 	register_sidebar( array(
-// 		'name' => __( 'Sidebar' ),
-// 		'id' => 'main-sidebar',
-// 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-// 		'after_widget' => '</li>',
-// 		'before_title' => '<h3 class="widget-title">',
-// 		'after_title' => '</h3>',
-// 	) );
-
-// }//end register_widgets()
-// add_action( 'widgets_init', 'register_widgets' );
-
 
 // read more link
 // Replaces the excerpt "more" text by a link
@@ -212,7 +197,7 @@ class EM_Articles_Widget extends WP_widget {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ). $args['after_title'];
 		}
 
-		helloworld();
+		display_articles();
 		echo $args['after_widget'];
 		
 		// make function call to get the wp_query
@@ -250,7 +235,7 @@ class EM_Articles_Widget extends WP_widget {
 
 } // end of widget class
 
-function helloworld() {
+function display_articles() {
 	global $post;
 	$query = new WP_Query();
 	$query->query('post_type=articles&order=DESC&posts_per_page=5');
@@ -258,7 +243,7 @@ function helloworld() {
 		echo '<ul>';
 		while ($query->have_posts()) {
 			$query->the_post();
-			echo '<li><a href="' . get_field('article_link') . '">' . get_the_title() . '</a></li>';	
+			echo '<li><a href="' . get_field('article_link') . '" target="_blank">' . get_the_title() . '</a></li>';	
 		}
 		echo '</ul>';
 		wp_reset_postdata(); 
