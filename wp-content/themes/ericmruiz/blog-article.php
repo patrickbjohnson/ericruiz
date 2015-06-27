@@ -15,7 +15,6 @@
 				</header>
 				<div class="article-content">
 					<?php (is_single()) ? the_content() : the_excerpt() ?>
-
 				</div>
 				<span class="content-flag"></span>
 				<hr>
