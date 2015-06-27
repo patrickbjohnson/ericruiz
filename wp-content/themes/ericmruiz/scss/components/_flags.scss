@@ -1,0 +1,72 @@
+.page-title {
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		position: relative;
+		display: block;
+		background: map-get($colors, red);
+
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 50px;
+		left: 0;
+		right: 0;
+		width: 0px;
+		height: 22px;
+		margin: auto;
+		border-bottom: 5px solid #001f3f;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		z-index: 10;
+	}
+
+
+	@media (min-width: map-get($break, tablet)){
+		&:after {
+			top: 70px;
+		}
+	}
+}
+
+.content-flag {
+	position: relative;
+	display: block;
+	width: 50%;
+	margin: 50px auto 100px;
+	height: 3px;
+	background: map-get($colors, red);
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		height: 10px;
+		margin: auto;
+	}
+
+	&:after {
+		position: absolute;
+		top: 10px;
+		left: 0;
+		right: 0;
+		width: 0px;
+		border-bottom: 5px solid #fff;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		z-index: 10;
+	}
+
+	&:before {
+		position: relative;
+		width: 30px;
+		padding-top: 15px;
+		background: map-get($colors, red);
+		top: 0;
+	}
+}
+

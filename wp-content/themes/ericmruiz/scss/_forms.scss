@@ -1,0 +1,6 @@
+// input {width: 100%;}
+// @include susy-breakpoint(30em, 8) {
+//   // nested code uses an 8-column grid,
+//   // starting at a 30em min-width breakpoint...
+//   .input { @include span(3); }
+// }

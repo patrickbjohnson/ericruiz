@@ -1,0 +1,48 @@
+.page-template .article ol, 
+.page-template .article ul, 
+.page-template .single-article ol, 
+.page-template .single-article ul {margin: 0;}
+
+.book-list {
+		list-style: none;
+		margin: 0;
+}
+
+.book {
+	border-bottom: 1px solid map-get($colors, offwhite);
+	margin-bottom: em(25px);
+	padding-bottom: em(15px);
+	@media (min-width: map-get($break, tablet)) {
+		@include span(4);
+		border-bottom: 0;
+		&:nth-child(3n+3) {
+			float: right;
+			clear: right;
+			margin-right: 0;
+		}
+		min-height: 250px;
+	}
+
+	&-img {
+		margin-top: 0;
+		margin-bottom: em(10px);
+	}
+	&-details {
+		@media (min-width: map-get($break, tablet)) {
+			text-align: center;
+		}
+	}
+	
+	&-title {
+		margin-bottom: em(5px);
+		font-size: em(16px);
+		line-height: 1;
+	}
+	&-author {
+		font-family: $freight-body;
+		font-size: em(12px);
+		line-height: 1;
+		text-transform: none;
+
+	}
+}

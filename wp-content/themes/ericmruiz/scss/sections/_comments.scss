@@ -1,0 +1,124 @@
+// .comment {
+// 	display: block;
+// 	margin-bottom: 25px;
+// 	overflow: hidden;
+// 	border-bottom: 1px dotted #ccc;
+// }
+
+// .comment-head {
+// 	position: relative;
+// 	overflow: hidden;
+
+// 	.reply {
+// 		@include omega;
+// 		position: absolute;
+// 		top: 0;
+// 		right: 0;
+// 		padding: 0 5px;
+// 		font-size: em(12px);
+// 		color: lighten($base-blue, 25%);
+// 	}
+
+// 	.comment-author {
+// 		@include span(1.25);
+// 		margin-bottom: 10px;
+// 		img {
+// 			width: 100%;
+// 			height: auto;
+// 			margin: 0;
+// 		}
+// 	}
+
+// 	.comment-meta {
+// 		@include span(10);
+// 		position: relative;
+// 		margin-right: 0;
+// 		p {margin-bottom: 15px;}
+// 	}
+
+// 	.comment-details {float: left;}
+// 	.comment-author-name,
+// 	.comment-details {
+// 		font-size: em(12px);
+// 	}
+
+// 	.comment-author-name {
+// 		font-style: italic;
+// 		text-transform: capitalize;
+// 		font-weight: bold;
+// 	}
+// }
+
+// .comment-body {
+// 	padding: 5px 0;
+// 	overflow: hidden;
+
+// 	p {margin-bottom: 15px;}
+// }
+
+
+
+// ul.children li {
+// 	border: 0;
+// }
+
+
+
+// #comments-header {margin-bottom: 5px;}
+// #comments-header,
+// #comment-form-title {
+// 	font-family: $source-headline;
+// }
+
+// .comment-form label{
+// 	font-family: $source-headline;
+// 	display: block;
+// 	font-size: em(12px);
+// }
+
+// .input-wrap {
+// 	margin-bottom: 15px;
+// }
+// .input-wrap.textarea label{
+// 	vertical-align: top;
+// }
+
+// form .caption {
+// 	font-style: italic;
+// 	font-size: em(12px);
+// }
+
+// input[type="text"],
+// textarea {
+// 	width: 100%;
+// 	border: 0;
+// 	padding: 10px;
+// 	font-size: em(14px);
+// 	font-family: $freight-body;
+// 	border: 1px solid rgba($base-blue, 0.5);
+// 	border-radius: 2px;
+// }
+
+// input[type="submit"] {
+// 	@include prefix(transition, all 200ms ease);
+// 	border: 0;
+// 	padding: 10px 20px;
+// 	font-family: $source-headline;
+// 	color: $white;
+// 	background-color: $base-blue;
+// 	text-transform: uppercase;
+// 	cursor: pointer;
+// 	letter-spacing: 0.03em;
+// 	&:hover {
+// 		background-color: rgba($base-blue, .8);
+// 	}
+// }
+
+
+// ul.children {
+// 	margin-top: 10px;
+// 	margin-left: 30px;
+// }
+
+
+

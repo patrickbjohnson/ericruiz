@@ -1,0 +1,28 @@
+.footer {
+	background: map-get($colors, blue);
+	padding: em(25px) 0;
+	color: map-get($colors, blueSecond);
+	ol, ul {
+		margin-left: 0;
+		list-style: none;
+	}
+
+	a {color: map-get($colors, blueSecond);}
+}
+
+.footer-block {
+	margin-bottom: em(25px);
+	text-align: center;
+	&:nth-child(3n+3){margin-right: 0;}
+	@media (min-width: map-get($break, tablet)) {@include span(4);}
+
+
+	&--title {
+		font-size: em(16px);
+	}
+
+	li {margin-bottom: em(5px);}
+	a {font-size: em(12px);}
+
+}
+
