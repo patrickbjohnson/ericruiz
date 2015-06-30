@@ -9,7 +9,6 @@
 }
 
 .article {
-	// float: left;
 	margin-bottom: em(48px);
 	@media(min-width: map-get($break, tablet)) { 
 		margin-bottom: em(80px);
@@ -50,7 +49,6 @@
 
 		img {
 			max-width: 100%;
-			width: auto;
 		}
 	}
 }
@@ -71,10 +69,13 @@
 }
 
 
-
 .single-article {
 	margin-bottom: em(100px);
 
 	.article-title {margin-bottom: em(10px);}
 	.article-date {margin-bottom: em(16px);}
+}
+
+.articles-list {
+	text-align: center;
 }

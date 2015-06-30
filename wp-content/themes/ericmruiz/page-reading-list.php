@@ -6,7 +6,8 @@
 
 get_header();
 ?>
-<article id="page-<?php the_ID() ?>" class="article">
+
+<article class="article" id="page-<?php the_ID() ?>">
 	<header class="article-header">
 		<h1 ><?php  the_title() ?></h1>
 	</header>
@@ -15,6 +16,7 @@ get_header();
 		$args = array(
 			'post_type' => array( 'reading_list' )
 		);
+
 		$query = new WP_Query( $args );
 
 		if ($query->have_posts()): ?>
@@ -22,38 +24,30 @@ get_header();
 				<? while ($query->have_posts()) : $query->the_post() ?>
 				  <?php 
 				  	$img 		= 	get_field('book_img');
-					$title 	= 	get_field('book_title');
 					$author 	= 	get_field('book_author');
 					$url 		= 	get_field('book_url');
 				 ?>
-					<li class="book">
-						<div class="book-details">
-							<?php if ($url) : ?>
-								<a href="<?php echo $url;?>">
-									<?php if( $img ) : ?>
-										<img class="book-img" src="<?php echo $img['url']?>" alt="">
-									<?php endif;?>
-								</a>
-							<?php else : ?>
-								<?php if( $img ) : ?>
-									<img class="book-img" src="<?php echo $img['url']?>" alt="">
-								<?php endif; ?>
-							<?php endif;?>
-							
-							<?php if( $title ) : ?>
-								<h1 class="book-title"><?php echo $title; ?></h1>	
-							<?php endif; ?>
-							<?php if( $author ) : ?>
-								<h2 class="book-author"><?php echo $author; ?></h2>	
-							<?php endif; ?>
-						</div>
-					</li>
+				 <li class="book-list__item">
+				 	<?php if(get_the_title() && $img) :?>
+
+				 		<div class="book-list__media">
+				 			<img src="<?php echo $img['url'];?>" alt="">	
+				 		</div>
+				 		
+				 		<a class="book-list__meta" href="<?php echo $url;?>">
+				 			<h1 class="book-list__title"><?php the_title();?></h1>
+				 			<h2 class="book-list__author"><?php echo $author; ?></h2>
+				 		</a>
+				 		
+				 	<?php endif;?>
+				 </li>
 				<?php endwhile; ?>
 			</ul>
-			<?php else: ?>
-				<p>No books listed yet!</p>
-			<?php  endif; ?>
+		<?php else: ?>
+			<p>No books listed yet!</p>
+		<?php  endif; ?>
 	</div>
 </article>
+
 
 <?php get_footer(); ?>
