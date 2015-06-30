@@ -8,7 +8,7 @@
 			<article id="article-<?php the_ID() ?>" class="single-article">
 				<header class="article-header">
 					<?php if ( has_post_thumbnail()): ?>
-						<a class="featured-image" href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail() ?></a>
+						<?php the_post_thumbnail() ?>
 					<?php endif; ?>
 					<h1 class="article-title"><?php the_title() ?></h1>
 					<div class="article-date"><?php the_date('m-d-Y') ?></div>

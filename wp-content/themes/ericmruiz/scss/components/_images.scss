@@ -1,16 +1,54 @@
 img {
 	display: block;
-	width: 100%;
-	max-width: em(500px);
+	// width: 100%;
+	// max-width: em(500px);
+	max-width: 100%;
 	height: auto;
 	margin: em(25px) auto em(35px);
-	max-width: em(800px);
+// 	max-width: em(800px);
 }
 
 
-img.alignright { float: right; margin: 0 0 1em 1em; }
-img.alignleft { float: left; margin: 0 1em 1em 0; }
-img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
-.alignright { float: right; }
-.alignleft { float: left; }
-.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+img.alignright { 
+	display: block;
+	width: 100%;
+	@media (min-width: map-get($break, tablet)) {
+		float: right; 
+		margin: 0 0 1em 1em; 	
+	}
+}
+
+img.alignleft { 
+	@media (min-width: map-get($break, tablet)) { 
+		float: left; 
+		margin: 0 1em 1em 0; 
+	}
+}
+
+img.aligncenter {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+.alignright { 
+
+	@media (min-width: map-get($break, tablet)) { 
+		float: right; 
+	}
+}
+.alignleft { 
+	@media (min-width: map-get($break, tablet)) {
+		float: left; 	
+	}
+	
+}
+.aligncenter { 
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+
+
+

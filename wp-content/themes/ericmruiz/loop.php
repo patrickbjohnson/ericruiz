@@ -15,8 +15,13 @@
 		while (have_posts()) : the_post() ?>
 			<article id="article-<?php the_ID() ?>" class="article">
 				<header class="article-header">
-					<span class="article-date"><?php the_date('m-d-Y') ?></span>
-					<h1 ><?php if(!is_singular()): ?><a class="article-title" href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php endif; the_title() ?><?php if(!is_singular()): ?></a><?php endif; ?></h1>
+					<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>">
+						<?php if ( has_post_thumbnail()): ?>
+							<?php the_post_thumbnail() ?>
+						<?php endif; ?>
+						<span class="article-date"><?php the_date('m-d-Y') ?></span>
+						<h1 class="article-title"><?php the_title(); ?></h1>
+					</a>
 				</header>
 				<div class="article-content ">
 					<?php (is_single()) ? the_content() : the_excerpt() ?>
