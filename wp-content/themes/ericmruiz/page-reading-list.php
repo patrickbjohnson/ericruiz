@@ -16,7 +16,6 @@ get_header();
 		$args = array(
 			'post_type' => array( 'reading_list' )
 		);
-
 		$query = new WP_Query( $args );
 
 		if ($query->have_posts()): ?>
@@ -48,6 +47,7 @@ get_header();
 		<?php  endif; ?>
 	</div>
 </article>
+
 
 
 <?php get_footer(); ?>

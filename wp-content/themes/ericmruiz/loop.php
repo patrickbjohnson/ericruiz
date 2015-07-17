@@ -42,4 +42,3 @@
 		<li class="page-nav nav-next"><?php previous_posts_link( 'Newer posts' ); ?></li>
 	</ul>
 <?php endif; ?>
-

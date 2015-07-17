@@ -5,6 +5,7 @@
  */
 
 get_header();
+
 ?>
 
 <article class="article" id="page-<?php the_ID() ?>">
@@ -23,8 +24,8 @@ get_header();
 			<ul class="articles-list">
 				<? while ($query->have_posts()) : $query->the_post() ?>
 				  <?php 
-				  	$url 		= get_field('article_link');
-				  	$publication 		= get_field('article_publication');
+				  	$url = get_field('article_link');
+				  	$publication = get_field('article_publication');
 				 ?>
 				 <li class="book-list__item">
 			 		<a class="book-list__meta" href="<?php echo $url;?>">
@@ -39,6 +40,3 @@ get_header();
 		<?php  endif; ?>
 	</div>
 </article>
-
-
-<?php get_footer(); ?>

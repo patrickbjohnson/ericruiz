@@ -49,6 +49,7 @@
 
 		img {
 			max-width: 100%;
+			width: auto;
 		}
 	}
 }
@@ -67,7 +68,6 @@
 	margin: 0 em(10px);
 	color: map-get($colors, red);
 }
-
 
 .single-article {
 	margin-bottom: em(100px);
