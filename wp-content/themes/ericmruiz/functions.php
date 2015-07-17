@@ -255,3 +255,8 @@ function register_em_articles_widget() {
     register_widget( 'EM_Articles_Widget' );
 }
 add_action( 'widgets_init', 'register_em_articles_widget' );
+
+function show_posts_nav() {
+	global $wp_query;
+	return ($wp_query->max_num_pages > 1);
+}

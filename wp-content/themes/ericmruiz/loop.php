@@ -34,3 +34,12 @@
 		<p>Nothing matches your query.</p>
 	<?php  endif; ?>
 <?php  endif; ?>
+
+
+<?php if (show_posts_nav()) : ?>
+	<ul class="page-controls">
+		<li class="page-nav nav-prev"><?php next_posts_link( 'Older posts' ); ?></li>
+		<li class="page-nav nav-next"><?php previous_posts_link( 'Newer posts' ); ?></li>
+	</ul>
+<?php endif; ?>
+

@@ -1,0 +1,25 @@
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.form-row {
+	text-align: center;
+}
+
+.form-control {
+	display: inline-block;
+	min-width: 200px;
+	padding: 10px 15px;
+	font-family: $freight-body;
+}
+
+.form-search {
+	margin-bottom: 50px;
+}
