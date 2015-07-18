@@ -1,10 +1,3 @@
-require.config({
-	"baseUrl": "wp-content/themes/yeopress/js",
-	"paths": {
-		"jquery": "vendor/jquery/jquery"
-	}
-});
-
-require(['jquery'], function($) {
-	console.log('Working!!');
+$(document).ready(function(){
+	console.log('welcome to this site!');
 });

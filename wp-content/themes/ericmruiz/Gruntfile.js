@@ -136,18 +136,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Require config
-		requirejs : {
-			production : {
-				options : {
-					name : 'global',
-					baseUrl : 'js',
-					mainConfigFile : 'js/global.js',
-					out : 'js/optimized.min.js'
-				}
-			}
-		},
-
 		// Image min
 		imagemin : {
 			production : {
