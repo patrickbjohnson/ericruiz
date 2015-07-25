@@ -10,6 +10,7 @@
 	<title><?php wp_title( '|', true, 'right' ) ?>Eric Ruiz</title>
 	<meta name="author" content="">
 	<link rel="author" href="">
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<?php wp_head() ?>
 	<script src="//use.typekit.net/xvy1guw.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
